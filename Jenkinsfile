@@ -24,7 +24,7 @@ pipeline {
               echo " Buidnumber ${env.BUILD_NUMBER} Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
-        stage('Build') {
+        stage('Build Docker image') {
             steps {
               // Run Maven on a Unix agent.
               sh "docker build ."
