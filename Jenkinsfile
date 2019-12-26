@@ -22,6 +22,12 @@ pipeline {
               //sh "sudo apt install -y docker.io"
               sh "sudo docker --version"
               echo " Buidnumber ${env.BUILD_NUMBER} Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+              
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
 
             }
         }
