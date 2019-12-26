@@ -14,9 +14,12 @@ pipeline {
               sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-        stage('Deploy') {
+        stage('Docker installing') {
             steps {
-                echo 'Deploying....'
+              // Installing doker.
+              sh "sudo apt-get update"
+              sh "sudo apt-get remove docker docker-engine docker.io"
+              sh "sudo apt install -y docker.io"
             }
         }
     }
