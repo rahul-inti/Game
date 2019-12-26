@@ -20,6 +20,8 @@ pipeline {
               sh "sudo apt-get update"
               sh "sudo apt-get remove docker docker-engine docker.io"
               sh "sudo apt install -y docker.io"
+              sh "sudo docker --version"
+
             }
         }
     }
