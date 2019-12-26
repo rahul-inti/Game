@@ -22,13 +22,7 @@ pipeline {
               //sh "sudo apt install -y docker.io"
               sh "sudo docker --version"
               echo " Buidnumber ${env.BUILD_NUMBER} Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-              
-        stage('Build docker image') {
-            steps {
-              // Run Maven on a Unix agent.
-              sh "docker build ."
-            }
-        }
+
             }
         }
     }
