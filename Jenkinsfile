@@ -19,8 +19,9 @@ pipeline {
               // Installing doker.
               //sh "sudo apt-get update"
               //sh "sudo apt-get remove -y docker docker-engine docker.io"
-              sh "sudo apt install -y docker.io"
+              //sh "sudo apt install -y docker.io"
               sh "sudo docker --version"
+              echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 
             }
         }
