@@ -27,7 +27,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
               // Run Maven on a Unix agent.
-              sh "docker build ."
+              sh "sudo docker build ."
             }
         } 
     }
