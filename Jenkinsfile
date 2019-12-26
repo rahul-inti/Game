@@ -17,8 +17,8 @@ pipeline {
         stage('Docker installing') {
             steps {
               // Installing doker.
-              sh "sudo apt-get update"
-              sh "sudo apt-get remove docker docker-engine docker.io"
+              //sh "sudo apt-get update"
+              //sh "sudo apt-get remove -y docker docker-engine docker.io"
               sh "sudo apt install -y docker.io"
               sh "sudo docker --version"
 
