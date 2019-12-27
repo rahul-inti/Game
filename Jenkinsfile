@@ -34,8 +34,8 @@ pipeline {
 
         stage('Push Docker image') {
             steps { 
-              withCredentials([string(credentialsId: 'Dockerpass', variable: 'Dockerhub')]) {
-               sh "sudo docker login -u rahulinti123" -p ${Dockerhub}"
+              //withCredentials([string(credentialsId: 'Dockerpass', variable: 'Dockerhub')]) {
+               sh "sudo docker login -u rahulinti123 -p ${Dockerhub}"
           }
         }  
        }   
