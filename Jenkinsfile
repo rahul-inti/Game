@@ -28,7 +28,7 @@ pipeline {
             steps {
               // Run Maven on a Unix agent.
               sh "sudo docker build -t rahulinti123/my-app:${env.BUILD_NUMBER} ."
-              sh "sudo docker run -p 8080:8081 -d --name rahulinti123/my-app:${env.BUILD_NUMBER}"
+              sh "sudo docker run -p 8080:8081 -d --name my-app rahulinti123/my-app:${env.BUILD_NUMBER}"
             }
         } 
     }
