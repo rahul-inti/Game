@@ -36,6 +36,7 @@ pipeline {
             steps { 
                withCredentials([string(credentialsId: 'Dockerpass', variable: 'Dockerhub')]) {
                sh "sudo docker login -u rahulinti123 -p ${Dockerhub}"
+               sh "sudo docker push rahulinti123/my-app:${env.BUILD_NUMBER}"
           }
         }  
        }   
