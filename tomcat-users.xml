@@ -7,5 +7,7 @@
 <tomcat-users>
   <role rolename="manager-gui"/>
   <role rolename="admin"/>
-  <user username="admin" password="admin" roles="manager-gui,admin"/>
+  <role rolename="admin-gui"/>
+  <role rolename="admin-script"/>
+  <user username="admin" password="admin" roles="manager-gui,admin,admin-gui,admin-script"/>
 </tomcat-users>
