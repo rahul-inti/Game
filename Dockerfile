@@ -4,8 +4,8 @@ RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
 RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
-RUN mkdir /usr/local/tomcat/Ganmeoflife
+RUN mkdir /usr/local/tomcat/webapps/Ganmeoflife
 RUN cp -Rv /tmp/apache-tomcat-9.0.30/* /usr/local/tomcat/
-ADD ./target/SampleCode.jar /usr/local/tomcat/webapps/
+ADD ./target/SampleCode.jar /usr/local/tomcat/webapps/Ganmeoflife
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
