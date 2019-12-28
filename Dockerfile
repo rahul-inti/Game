@@ -7,6 +7,6 @@ RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomca
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.30/* /usr/local/tomcat/
 RUN mkdir /usr/local/tomcat/webapps/Ganmeoflife
-RUN curl -O -L https://github.com/rajeshtechm/kubernetes/blob/master/sparkjava-hello-world-1.0.war /usr/local/tomcat/webapps/Ganmeoflife/
+RUN wget https://github.com/rajeshtechm/kubernetes/blob/master/sparkjava-hello-world-1.0.war -o /usr/local/tomcat/webapps/Ganmeoflife/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
