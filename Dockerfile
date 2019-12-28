@@ -5,6 +5,6 @@ RUN mkdir /usr/local/tomcat
 RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.30/* /usr/local/tomcat/
-copy /var/lib/jenkins/workspace/Ganmeoflife/target/SampleCode.jar /usr/local/tomcat/webapps/
+COPY /var/lib/jenkins/workspace/Ganmeoflife/target/SampleCode.jar /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
