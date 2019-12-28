@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get -y update && apt-get -y upgrade
-RUN apt install curl
+RUN apt -y install curl
 RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
 RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz -O /tmp/tomcat.tar.gz
