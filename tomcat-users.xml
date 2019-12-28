@@ -7,5 +7,5 @@
 <tomcat-users>
   <role rolename="manager-gui"/>
   <role rolename="admin"
-  <user username="tomcat" password="s3cret" roles="manager-gui,admin"/>
+  <user username="admin" password="admin" roles="manager-gui,admin"/>
 </tomcat-users>
